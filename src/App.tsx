@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { Layout, Menu, theme, ConfigProvider } from "antd"
+import { SiderApp } from "./components/Sider/Index"
 import "./styles/App.styles.css"
-import { SiderBom } from "./components/Sider/Index"
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Footer } = Layout;
 
 export const App = () => {
   const [render, updateRender] = useState();
@@ -33,7 +33,7 @@ export const App = () => {
 
       <Layout style={{ minHeight: "100vh" }}>
         {/* <Sider /> */}
-        <SiderBom />
+        <SiderApp />
         <Layout>
           <Content>{components[1]}</Content>
         </Layout>
