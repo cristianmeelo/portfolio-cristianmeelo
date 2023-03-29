@@ -42,23 +42,23 @@ export const SiderApp = (props: any) => {
                 </Menu.Item>
 
                 <SubMenu key="2" icon={<AppstoreOutlined />} title="Social">
-                    <Menu.Item key="3" icon={<LinkedinOutlined />} onClick={handleClick}>
-                        Linkedin
+                    <Menu.Item key="3" icon={<LinkedinOutlined />} >
+                        <a href="https://www.linkedin.com/in/cristian-melo/" target="_blank">Linkedin</a>
                     </Menu.Item>
                     <Menu.Item key="4" icon={<GithubOutlined />} onClick={handleClick}>
-                        GitHub
+                        <a href="https://github.com/cristianmeelo" target="_blank">GitHub</a>
                     </Menu.Item>
                     <Menu.Item key="5" icon={<MediumWorkmarkOutlined />} onClick={handleClick}>
-                        Medium
+                        <a href="https://medium.com/@cristianmeelo" target="_blank">Medium</a>
                     </Menu.Item>
                     <Menu.Item key="6" icon={<BehanceOutlined />} onClick={handleClick}>
-                        Behance
+                        <a href="https://www.behance.net/cristianmeelo" target="_blank">Behance</a>
                     </Menu.Item>
                     <Menu.Item key="7" icon={<InstagramOutlined />} onClick={handleClick}>
-                        Instagram
+                        <a href="https://www.instagram.com/20ver_cris/" target="_blank">Instagram</a>
                     </Menu.Item>
                     <Menu.Item key="8" icon={<WhatsAppOutlined />} onClick={handleClick}>
-                        WhatsApp
+                        <a href="https://api.whatsapp.com/send?phone=5551986275006&text=" target="_blank">WhatsApp</a>
                     </Menu.Item>
                 </SubMenu>
 
