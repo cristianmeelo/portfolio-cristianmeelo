@@ -19,7 +19,11 @@ type SiderProps = {
 
 export const SiderApp = (props: any) => {
     const [collapsed, setCollapsed] = useState<boolean>(false)
-    const { handleClick } = props
+    const { handleClick } = props;
+
+    const handleCV = () => {
+
+    }
 
     //     return (
     //         <Sider collapsible collapsed={collapsed} onCollapse={(value: boolean | ((prevState: boolean) => boolean)) => setCollapsed(value)}>
@@ -95,8 +99,8 @@ export const SiderApp = (props: any) => {
                 </SubMenu>
 
 
-                <MenuItem key="21" onClick={handleClick} icon={<SolutionOutlined />} title="Baixe meu CV">
-                    Baixe meu CV
+                <MenuItem key="21" onClick={handleCV} icon={<SolutionOutlined />} title="Baixe meu CV">
+                    <a href="https://drive.google.com/u/0/uc?id=1UaJXx1QcnUu6xt_ca50061kN64_jIPVi&export=download">Baixe meu CV</a>
                 </MenuItem>
 
             </Menu>

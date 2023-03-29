@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Layout, Menu, theme, ConfigProvider } from "antd"
-import { SiderApp } from "./components/Sider/Index"
+import { SiderApp } from "./components/Sider/Index";
 import "./styles/App.styles.css"
 const { Header, Content, Footer } = Layout;
 
