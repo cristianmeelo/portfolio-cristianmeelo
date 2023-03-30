@@ -1,27 +1,33 @@
 import { useState } from "react"
-import { Layout, Menu, theme, ConfigProvider } from "antd"
+import { Layout, theme, ConfigProvider } from "antd"
 import { SiderApp } from "./components/Sider/Index";
+const { Content, Footer } = Layout;
 import "./styles/App.styles.css"
-const { Header, Content, Footer } = Layout;
+
+const components = {
+  1: <>Sobre</>,
+  2: <>XP</>,
+  3: <>Educacao</>,
+  4: <>Habilidades</>,
+  5: <>LandinPage</>,
+  6: <>React App</>,
+  7: <> Challenges</>,
+  8: <> YT</>,
+  9: <> Letiruas</>,
+  10: <> Songs</>,
+};
 
 export const App = () => {
-  const [render, updateRender] = useState();
+  const [menuNumber, setMenuNumber] = useState<number>(1);
 
 
   const {
     token: { colorBgContainer },
   } = theme.useToken()
 
+  // const handleMenuClick = (menu: any) => updateRender(menu.key);
+  const handleMenuClick = (menu: any) => setMenuNumber(menu.key);
 
-
-  const handleMenuClick = (menu: any) => {
-    updateRender(menu.key);
-  };
-
-  const components = {
-    1: <div>Option 1</div>,
-    2: <div>Option 2</div>,
-  };
 
   return (
     <ConfigProvider
@@ -32,10 +38,9 @@ export const App = () => {
       }}>
 
       <Layout style={{ minHeight: "100vh" }}>
-        {/* <Sider /> */}
-        <SiderApp />
+        <SiderApp handleMenuClick={handleMenuClick} />
         <Layout>
-          <Content>{components[1]}</Content>
+          <Content>{components[menuNumber]}</Content>
         </Layout>
       </Layout>
 
