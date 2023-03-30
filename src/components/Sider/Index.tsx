@@ -29,7 +29,7 @@ export const SiderApp = ({ handleMenuClick }: any) => {
     // }
 
     return (
-        <Sider collapsed={collapsed} onCollapse={(value: boolean | ((prevState: boolean) => boolean)) => setCollapsed(value)} style={{ minHeight: "100vh" }}>
+        <Sider collapsible collapsed={collapsed} onCollapse={(value: boolean | ((prevState: boolean) => boolean)) => setCollapsed(value)} style={{ minHeight: "100vh" }}>
             {/* <img className="logo" src={BlueLogo} alt="Logo" /> */}
             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
                 <Menu.Item key="1" onClick={handleMenuClick} icon={<SearchOutlined />}>
