@@ -1,32 +1,20 @@
-import React from "react"
-import {
-    DesktopOutlined, RocketOutlined, FileOutlined, IdcardOutlined, BehanceOutlined, LayoutOutlined, PictureOutlined, InstagramOutlined,
-    SolutionOutlined, WhatsAppOutlined, SearchOutlined, LinkedinOutlined, GithubOutlined, MediumWorkmarkOutlined, ThunderboltOutlined,
-    AppstoreOutlined, ExperimentOutlined, ReadOutlined, HeartOutlined
-} from "@ant-design/icons"
+import MenuItem from "antd/lib/menu/MenuItem"
 import { useState } from "react"
 import { Menu, Layout } from "antd"
+import {
+    RocketOutlined, BehanceOutlined, LayoutOutlined, InstagramOutlined, SolutionOutlined, WhatsAppOutlined,
+    SearchOutlined, LinkedinOutlined, GithubOutlined,
+    MediumWorkmarkOutlined, ThunderboltOutlined,
+    AppstoreOutlined, ExperimentOutlined, ReadOutlined, HeartOutlined
+} from "@ant-design/icons"
+import { SiderProps } from "../../types/Index";
+const { Sider } = Layout;
+const { SubMenu } = Menu;
 
-import MenuItem from "antd/lib/menu/MenuItem"
-const { Sider } = Layout
 
-const { SubMenu } = Menu
-
-type SiderProps = {
-    handleMenuClick: string;
-}
-
-export const SiderApp = ({ handleMenuClick }: any) => {
+export const SiderApp = ({ handleMenuClick }: SiderProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false)
 
-
-    //     return (
-    //         <Sider collapsible collapsed={collapsed} onCollapse={(value: boolean | ((prevState: boolean) => boolean)) => setCollapsed(value)}>
-    //             <div style={{ height: 32, margin: 16, background: "rgba(255, 255, 255, 0.2)" }} />
-    //             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline" items={items} />
-    //         </Sider>
-    //     )
-    // }
 
     return (
         <Sider collapsible collapsed={collapsed} onCollapse={(value: boolean | ((prevState: boolean) => boolean)) => setCollapsed(value)} style={{ minHeight: "100vh" }}>
